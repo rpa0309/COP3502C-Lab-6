@@ -29,9 +29,13 @@ if __name__ == '__main__':
         option = int(input('Please enter an option: '))
 
         if option == 1:
-            pass
+            pword = input('Please enter you password to encode: ')
+            pword = encoder(pword)
+            print('Your password has been encoded and stored!')
         elif option == 2:
-            pass
+            print('The encoded password is', pword, end='')
+            print('and the original password is', decoder(pword), '.')
+            
         elif option == 3:
             running = False
         else:
