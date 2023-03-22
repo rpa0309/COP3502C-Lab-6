@@ -8,6 +8,15 @@ def encoder(pword):
         encoded_str += str(temp)
     return encoded_str
 
+def decoder(pword):
+    decoded_str = ''
+    for digit in pword:
+        temp = int(digit) - 3
+        if temp >= 10:
+            temp -= 10
+        decoded_str += str(temp)
+    return decoded_str
+
 if __name__ == '__main__':
     running = True
     while running:
