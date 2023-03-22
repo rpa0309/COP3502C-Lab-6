@@ -3,6 +3,8 @@ def encoder(pword):
     encoded_str = ''
     for digit in pword:
         temp = int(digit) + 3
+        if temp >= 10:
+            temp -= 10
         encoded_str += str(temp)
     return encoded_str
 
